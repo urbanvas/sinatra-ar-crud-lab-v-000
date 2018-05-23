@@ -17,7 +17,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/posts' do
-    @post = Post.create(params["name"], params["content"])
+    @post = Post.create(params)
 
     erb :index
   end
